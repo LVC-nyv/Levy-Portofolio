@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Levy</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8em;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    nav {
+      margin-top: 20px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffea00;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.7s ease-out;
+    }
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .project-card {
+      background-color: #1e1e1e;
+      padding: 20px;
+      margin: 15px;
+      border-radius: 10px;
+      display: inline-block;
+      width: 250px;
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background-color: #222;
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Portofolio Levy</h1>
+  <p>Desainer | Developer | Kreator Digital</p>
+  <nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#proyek">Proyek</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+</header>
+
+<section id="tentang">
+  <h2>Tentang Saya</h2>
+  <p>Saya adalah kreator digital yang aktif di TikTok, membuat cover lagu, desain antarmuka, dan berbagai proyek kreatif lainnya.</p>
+</section>
+
+<section id="proyek">
+  <h2>Proyek Terbaru</h2>
+  <div class="project-card">
+    <h3>Cover Lagu Viral</h3>
+    <p>Video dengan 4000+ views di TikTok.</p>
+  </div>
+  <div class="project-card">
+    <h3>Desain Aplikasi</h3>
+    <p>UI/UX aplikasi pemesanan kopi modern.</p>
+  </div>
+</section>
+
+<section id="kontak">
+  <h2>Hubungi Saya</h2>
+  <p>Email: levy@email.com</p>
+  <p>Instagram: @levy_official</p>
+</section>
+
+<footer>
+  &copy; 2025 Levy. Semua hak dilindungi.
+</footer>
+
+<script>
+  const sections = document.querySelectorAll("section");
+  window.addEventListener("scroll", () => {
+    sections.forEach((sec) => {
+      if (window.scrollY > sec.offsetTop - 400) {
+        sec.classList.add("show");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
